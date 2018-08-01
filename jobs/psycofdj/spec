@@ -1,0 +1,10 @@
+---
+name: psycofdj
+
+templates:
+  pre-start: bin/pre-start
+
+packages:
+  - psycofdj
+
+properties: {}

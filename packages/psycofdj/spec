@@ -1,0 +1,8 @@
+---
+name: psycofdj
+
+dependencies: []
+
+files:
+ - bash-config/bin/prompt
+ - bash-config/bashrc
