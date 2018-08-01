@@ -1,6 +1,0 @@
-set -e
-
-mkdir -p $BOSH_INSTALL_TARGET/bin $BOSH_INSTALL_TARGET/config
-cp ./bash-config/bin/prompt $BOSH_INSTALL_TARGET/bin/prompt
-cp ./bash-config/bashrc $BOSH_INSTALL_TARGET/config/bashrc
-
