@@ -84,4 +84,6 @@ addons:
 releases:
 - name: psycofdj
   version: "1.0"
+  url: https://github.com/psycofdj/psycofdj-release/releases/download/1.0/psycofdj-1.0.tgz
+  sha1: 5ae0399e2d1885f67aeb4deb7fd8be5d30ba5a78
 ```
