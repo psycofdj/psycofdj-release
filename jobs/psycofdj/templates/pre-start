@@ -1,6 +1,0 @@
-#!/bin/bash
-
-cp /var/vcap/packages/psycofdj/config/bashrc /root/.bashrc
-cat - > /etc/profile.d/01-prompt.sh <<EOF
-. /var/vcap/packages/psycofdj/config/bashrc
-EOF
