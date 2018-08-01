@@ -2,7 +2,7 @@
 
 Configures bashrc to ease day-to-day operations.
 
-- installs shell prompt that display usefull information
+- installs shell prompt that displays usefull information
 - define custom aliases
 - define bash helpers functions to navigates to jobs, packages and logs directory
 - installs bash completion for monit
