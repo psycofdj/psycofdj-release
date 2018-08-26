@@ -2,7 +2,7 @@
 
 Configures bashrc to ease day-to-day operations.
 
-- installs shell prompt that display usefull information
+- installs shell prompt that displays usefull information
 - define custom aliases
 - define bash helpers functions to navigates to jobs, packages and logs directory
 - installs bash completion for monit
@@ -84,4 +84,6 @@ addons:
 releases:
 - name: psycofdj
   version: "2.0"
+  url: https://github.com/psycofdj/psycofdj-release/releases/download/1.0/psycofdj-2.0.tgz
+  sha1: ...
 ```
