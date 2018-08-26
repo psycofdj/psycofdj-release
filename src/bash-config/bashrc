@@ -55,7 +55,7 @@ function __prompt_export() {
   export NAME=$(cat /var/vcap/instance/name)
   export STATUS="faulty"
   if [ "${USER}" = "root" ]; then
-      monit status | grep status | grep -v  monitoring | grep -q -v running
+      monit status | grep status | grep -v  monitoring | grep -v accessible | grep -q -v running
       if [ $? -eq 1 ]; then
           export STATUS="running"
       fi
@@ -102,12 +102,16 @@ function logf() {
       return 1
   fi
 
-  if [ -f /var/vcap/sys/log/$1/$1.stdout.log ]; then
-      tail -f /var/vcap/sys/log/$1/$1.stdout.log
-  elif [ -f /var/vcap/sys/log/$1/$1.log ]; then
-      tail -f /var/vcap/sys/log/$1/$1.log
+  if [ "$2" == "all" ]; then
+      tail -f /var/vcap/sys/log/$1/*.log
   else
-    tail -f /var/vcap/sys/log/$1/*.log
+    if [ -f /var/vcap/sys/log/$1/$1.stdout.log ]; then
+        tail -f /var/vcap/sys/log/$1/$1.stdout.log
+    elif [ -f /var/vcap/sys/log/$1/$1.log ]; then
+        tail -f /var/vcap/sys/log/$1/$1.log
+    else
+      tail -f /var/vcap/sys/log/$1/*.log
+    fi
   fi
 }
 

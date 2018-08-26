@@ -60,11 +60,11 @@ Fields:
 
 - `list-jobs` : display list of installed jobs
 - `list-packages` : display list of installed packages
-- `go-job` : (+completion) change directory to given job
-- `go-package` : (+completion) change directory to given package
-- `go-logs` : (+completion) change directory to given job's logs
-- `logf` : (+completion) tail logs for given job
-- `monit` : (+completion) adds completion to monit commands
+- `go-job <job>` : (+completion) change directory to given job
+- `go-package <package>` : (+completion) change directory to given package
+- `go-logs <job>` : (+completion) change directory to given job's logs
+- `logf <job> [all]` : (+completion) tail logs for given job. When all is given, all logs files are displayed.
+- `monit <args...>` : (+completion) adds completion to monit commands
 
 ## Usage
 
@@ -83,5 +83,5 @@ addons:
 
 releases:
 - name: psycofdj
-  version: "1.0"
+  version: "2.0"
 ```
