@@ -1,7 +1,8 @@
 ---
 name: psycofdj
 
-dependencies: ['python-2.7']
+dependencies:
+  - python-2.7
 
 files:
  - bash-config/bin/prompt
