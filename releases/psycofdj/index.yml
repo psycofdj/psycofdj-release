@@ -3,8 +3,12 @@ builds:
     version: "1.0"
   85ec1479-594f-448e-7473-a31ca3301524:
     version: "2.0"
+  9c60192a-437b-4cd6-48a4-82a527bbfacd:
+    version: "2.4"
   b8e598ac-a4fa-48f5-448e-a3be25d2e1af:
     version: "2.1"
+  cf0487b7-864d-4dcd-640e-25e47fa9cbcd:
+    version: "2.3"
   fcc8810b-34a9-425e-6665-b97580a56591:
     version: "2.2"
 format-version: "2"
