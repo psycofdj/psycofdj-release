@@ -115,6 +115,29 @@ function logf() {
   fi
 }
 
+function go-mysql() {
+  mysql --defaults-file=/var/vcap/jobs/pxc-mysql/config/mylogin.cnf
+}
+
+function go-gorouter() {
+  local l_config
+  local l_user
+  local l_password
+  local l_port
+  local l_path=$1
+
+  l_config=$(grep -A3 -e '^status:' /var/vcap/jobs/gorouter/config/gorouter.yml)
+  l_user=$(echo $(echo "${l_config}" | grep user | cut -d: -f2))
+  l_password=$(echo $(echo "${l_config}" | grep pass | cut -d: -f2))
+  l_port=$(echo $(echo "${l_config}" | grep port | cut -d: -f2))
+  if [ -z "${l_path}" ]; then
+      l_path="/routes"
+      echo curl -u "${l_user}:${l_password}" http://localhost:${l_port}${l_path}
+  else
+    curl -u "${l_user}:${l_password}" http://localhost:${l_port}${l_path}
+  fi
+}
+
 # . /etc/bash_completion
 
 promptcmd_push "__prompt_export"
