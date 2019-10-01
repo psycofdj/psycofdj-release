@@ -55,10 +55,13 @@ function __prompt_export() {
   export NAME=$(cat /var/vcap/instance/name)
   export STATUS="faulty"
   if [ "${USER}" = "root" ]; then
-      monit status | grep status | grep -v  monitoring | grep -v accessible | grep -q -v running
-      if [ $? -eq 1 ]; then
-          export STATUS="running"
-      fi
+    MONIT_STATUS=$(monit status 2>&1 | grep status)
+    if [ -n "$MONIT_STATUS" ]
+    then
+      echo "$MONIT_STATUS" |
+      grep -v  monitoring | grep -v accessible | grep -q -v running ||
+      export STATUS="running"
+    fi
   else
     export STATUS="???"
   fi
