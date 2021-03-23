@@ -1,0 +1,24 @@
+name: psycofdj
+version: 2.4.0
+commit_hash: f78224d
+uncommitted_changes: false
+jobs:
+- name: psycofdj
+  version: 15bc36a5133609064feb1b1ebf5c4e928397b7ec54c6b509e02f552a5597a1c7
+  fingerprint: 15bc36a5133609064feb1b1ebf5c4e928397b7ec54c6b509e02f552a5597a1c7
+  sha1: sha256:fd367017d61ec03bb13ff5945d55a4896389f65d88f53d99f538d519cf74e271
+  packages:
+  - psycofdj
+  - python-2.7
+packages:
+- name: psycofdj
+  version: 12f22cf532869da1a94e579a7650cc9262fc4f0d4ee5a0d47356f11aa5edb96d
+  fingerprint: 12f22cf532869da1a94e579a7650cc9262fc4f0d4ee5a0d47356f11aa5edb96d
+  sha1: sha256:64344a8d706d42526241377e9572309fc23d0d31de3b24110dfb9ed68c4d54b8
+  dependencies:
+  - python-2.7
+- name: python-2.7
+  version: 7063c9f4e43bf49374c2f6cc6c2f74a5467f2298
+  fingerprint: 7063c9f4e43bf49374c2f6cc6c2f74a5467f2298
+  sha1: bd130315766a7641dbd20aa328d16f084cc17965
+  dependencies: []
