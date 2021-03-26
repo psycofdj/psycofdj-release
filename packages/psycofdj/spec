@@ -1,9 +1,8 @@
 ---
 name: psycofdj
 
-dependencies:
-  - python-2.7
+dependencies: []
 
 files:
- - bash-config/bin/prompt
+ - bash-config/bin/genprompt
  - bash-config/bashrc
