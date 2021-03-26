@@ -1,0 +1,17 @@
+name: psycofdj
+version: 2.5.0
+commit_hash: 3c39302
+uncommitted_changes: false
+jobs:
+- name: psycofdj
+  version: d07c4ad6360eac99b936e8422b89987a1c050cf67613d934b99179d6faa767ec
+  fingerprint: d07c4ad6360eac99b936e8422b89987a1c050cf67613d934b99179d6faa767ec
+  sha1: sha256:41437c01a678bc21b927c00eb5e4761dce0435ff9e263277668fad6d5c94ae20
+  packages:
+  - psycofdj
+packages:
+- name: psycofdj
+  version: dd3caea20e337a80fbdbaf96419fa815bb8b80005747a3d3d696851347a56400
+  fingerprint: dd3caea20e337a80fbdbaf96419fa815bb8b80005747a3d3d696851347a56400
+  sha1: sha256:6c04ecde9bafbf7b81d4fb2d4b3d9ceaf08650155edc0b48f5af9d6558b769f6
+  dependencies: []
